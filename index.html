@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="zh-Hant">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -7,64 +7,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
     <style>
-        /* 1. 限制圖片最大高度，確保文字有空間顯示 */
+        /* 全域樣式優化 */
+        .reveal .slides { text-align: center; }
+        
+        /* 圖片高度限制：確保圖片不撐破螢幕，留空間給文字 */
         .reveal img { 
-            max-height: 450px !important; 
+            max-height: 400px !important; 
             width: auto !important; 
             margin: 10px auto !important;
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            display: block;
         }
-        
-        /* 2. 標題與文字統一縮放 */
-        .reveal h2 { font-size: 1.6em !important; margin-bottom: 20px !important; }
-        .reveal p, .reveal li { font-size: 0.8em !important; line-height: 1.4 !important; }
-        
-        /* 3. 修正表格比例 */
-        .reveal table { font-size: 0.6em !important; width: 100%; }
 
-        /* 4. 針對「快樂聽音樂」頁面的特殊修正 */
-        .reveal .music-container p {
-            font-size: 0.5em !important;
-            margin-top: 5px !important;
+        /* 標題大小統一 */
+        .reveal h2 { 
+            font-size: 1.5em !important; 
+            margin-bottom: 20px !important;
+            color: #fff;
         }
+
+        /* 列表與一般文字縮放 */
+        .reveal p, .reveal li { 
+            font-size: 0.8em !important; 
+            line-height: 1.4 !important;
+        }
+
+        /* 快樂聽音樂：左 1 右 2 佈局專用樣式 */
+        .music-container {
+            display: flex; 
+            gap: 20px; 
+            align-items: center; 
+            justify-content: center;
+        }
+        .music-item p {
+            font-size: 0.5em !important; 
+            margin-top: 5px !important;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        .music-item img {
+            max-height: 250px !important; /* 右側小圖高度再縮小 */
+            margin: 0 !important;
+        }
+
+        /* 表格優化 */
+        .reveal table { font-size: 0.6em !important; }
     </style>
 </head>
 <body>
     <div class="reveal">
-        <div class="slides">
-            <section data-markdown="content.md" 
-                     data-separator="^\n---\n" 
-                     data-separator-vertical="^\n\n"
-                     data-notes="^Note:">
-            </section>
-        </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.js"></script>
-    <script>
-        Reveal.initialize({
-            plugins: [ RevealMarkdown ],
-            hash: true,
-            center: true, // 內容垂直居中
-            
-            // --- 核心比例設定 ---
-            width: 960,         // 固定畫布寬度
-            height: 700,        // 固定畫布高度
-            margin: 0.05,       // 內容與螢幕邊緣的間距
-            minScale: 0.2,      // 螢幕太小時，內容自動縮小的極限
-            maxScale: 1.5,      // 螢幕太大時，內容自動放大的極限
-            
-            // --- 功能設定 ---
-            transition: 'slide', // 切換動畫改為較穩定的 slide
-            mouseWheel: true,
-            
-            markdown: {
-                smartypants: true,
-                sanitize: false // 允許內嵌 HTML
-            }
-        });
-    </script>
-</body>
-</html>
