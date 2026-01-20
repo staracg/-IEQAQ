@@ -2,70 +2,77 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>IEQAQ の Youtube 跨區教學簡報</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css">
+
     <style>
-        /* 強制縮放與置中 */
-        .reveal .slides {
-            height: 100% !important;
-            display: flex !important;
-            align-items: center !important;
-        }
-
-        /* 核心修復：限制所有圖片的高度 */
+        .reveal .slides { text-align: center; }
+        
+        /* 圖片自適應：高度鎖定 400px 以內 */
         .reveal img { 
-            max-height: 420px !important; /* 嚴格限制高度 */
+            max-height: 400px !important; 
             width: auto !important; 
-            max-width: 90% !important;
-            object-fit: contain;
-            margin: 15px auto !important;
-            border: 2px solid #555;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            margin: 10px auto !important;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
 
-        /* 標題樣式 */
-        .reveal h2 { 
-            font-size: 1.6em !important; 
-            margin-bottom: 0.5em !important;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
+        /* 標題與文字大小 */
+        .reveal h2 { font-size: 1.5em !important; margin-bottom: 15px !important; }
+        .reveal p, .reveal li { font-size: 0.8em !important; }
 
-        /* 文字大小調整 */
-        .reveal p, .reveal li { 
-            font-size: 0.85em !important; 
-        }
-
-        /* 快樂聽音樂：Flex 佈局優化 */
+        /* 快樂聽音樂：Flex 佈局 */
         .music-container {
             display: flex;
-            justify-content: center;
+            gap: 20px;
             align-items: center;
-            gap: 30px;
+            justify-content: center;
             width: 100%;
         }
-
         .music-item p {
-            font-size: 0.55em !important;
-            margin: 8px 0 !important;
+            font-size: 0.5em !important;
+            margin: 5px 0 !important;
             font-weight: bold;
         }
-
-        /* 特別縮小右側對比圖的高度 */
         .music-item img {
-            max-height: 220px !important;
+            max-height: 230px !important;
             margin: 0 !important;
-        }
-
-        /* 修正表格過大 */
-        .reveal table {
-            margin: 0 auto;
-            font-size: 0.7em !important;
         }
     </style>
 </head>
 <body>
     <div class="reveal">
-        <div class
+        <div class="slides">
+            <section data-markdown="content.md" 
+                     data-separator="^\n---\n" 
+                     data-separator-vertical="^\n\n">
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+
+    <script>
+        // 確保 DOM 載入後才執行
+        window.onload = function() {
+            Reveal.initialize({
+                plugins: [ RevealMarkdown ],
+                hash: true,
+                center: true,
+                width: 1100,
+                height: 800,
+                margin: 0.1,
+                transition: 'slide',
+                markdown: {
+                    smartypants: true,
+                    sanitize: false 
+                }
+            });
+        };
+    </script>
+</body>
+</html>
