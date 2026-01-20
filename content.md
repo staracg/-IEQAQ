@@ -82,18 +82,18 @@
 
 ## 🎵 快樂聽音樂
 
-<div style="display: flex; gap: 20px; align-items: center; justify-content: center;">
+<div class="music-container" style="display: flex; gap: 20px; align-items: center; justify-content: center;">
 <div style="flex: 1.5;">
-<img src="images/11.png" style="width: 100%; border: 2px solid #555; border-radius: 10px;">
+<img src="images/11.png" style="width: 100%;">
 </div>
-<div style="flex: 1; display: flex; flex-direction: column; gap: 15px;">
-<div style="text-align: center;">
-<img src="images/12.png" style="width: 100%; border: 2px solid #ff4d4d; border-radius: 8px;">
-<p style="font-size: 0.4em; color: #ff4d4d;"><small>每個月花$479當盤子</small></p>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
+<div>
+<img src="images/12.png" style="width: 100%;">
+<p style="color: #ff4d4d; font-weight: bold;">每個月花$479當盤子</p>
 </div>
-<div style="text-align: center;">
-<img src="images/13.png" style="width: 100%; border: 2px solid #4CAF50; border-radius: 8px;">
-<p style="font-size: 0.4em; color: #4CAF50;"><small>每個月花$175當榮譽印度人</small></p>
+<div>
+<img src="images/13.png" style="width: 100%;">
+<p style="color: #4CAF50; font-weight: bold;">每個月花$175當榮譽印度人</p>
 </div>
 </div>
 </div>
