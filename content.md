@@ -15,21 +15,27 @@
 
 ## 01 申辦印度區 Apple ID
 * 國家務必選擇 **印度**
+
 <br>
+
 ![註冊 Apple ID](images/1.png)
 
 ---
 
 ## 02 下載 Youtube
 * 刪除舊 App，用印度帳號重新下載
+
 <br>
+
 ![下載 App](images/2.png)
 
 ---
 
 ## 03 打開 Youtube 登入
 * 登入原帳號，確認顯示為印度幣值 ₹
+
 <br>
+
 ![登入確認](images/3.png)
 
 ---
@@ -47,7 +53,9 @@
 
 ## 06 App Store 儲值
 * 記得儲存在印度的 Apple ID 帳戶
+
 <br>
+
 ![儲值](images/6.png)
 
 ---
@@ -70,7 +78,9 @@
 * **State**: Punjab
 * **Postcode**: 144003
 * **Phone**: 2231-30147
+
 <br>
+
 ![地址參考](images/10.png)
 
 ---
