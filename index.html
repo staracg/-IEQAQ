@@ -38,8 +38,18 @@
             plugins: [ RevealMarkdown ],
             hash: true,
             center: true,
-            transition: 'convex', // 切換效果
-            mouseWheel: true      // 支援滑鼠滾輪
+            // --- 加入以下設定來控制縮放 ---
+            width: 1050,         // 簡報基礎寬度
+            height: 700,         // 簡報基礎高度
+            margin: 0.1,         // 內容與邊緣的間距
+            minScale: 0.2,       // 最小縮放比例（讓內容在小螢幕能自動縮小）
+            maxScale: 2.0,       // 最大縮放比例
+        
+            markdown: {
+                smartypants: true,
+                sanitize: false 
+                },
+            transition: 'convex'
         });
     </script>
 </body>
