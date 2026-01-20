@@ -2,23 +2,32 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Youtube 跨區教學簡報</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
     <style>
+        /* 1. 限制圖片最大高度，確保文字有空間顯示 */
         .reveal img { 
-        max-height: 400px !important; /* 調小圖片高度，預留空間給標題和文字 */
-        width: auto;
-        border: 2px solid #666; 
-        border-radius: 8px; 
-        box-shadow: 0 5px 15px rgba(0,0,0,0.5); 
-        margin: 10px auto !important;
+            max-height: 450px !important; 
+            width: auto !important; 
+            margin: 10px auto !important;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
-        /* 讓表格字體也縮小一點，避免跑版 */
-        .reveal table { font-size: 0.6em !important; }
-        /* 讓段落文字縮小 */
-        .reveal p { font-size: 0.8em; }
+        
+        /* 2. 標題與文字統一縮放 */
+        .reveal h2 { font-size: 1.6em !important; margin-bottom: 20px !important; }
+        .reveal p, .reveal li { font-size: 0.8em !important; line-height: 1.4 !important; }
+        
+        /* 3. 修正表格比例 */
+        .reveal table { font-size: 0.6em !important; width: 100%; }
+
+        /* 4. 針對「快樂聽音樂」頁面的特殊修正 */
+        .reveal .music-container p {
+            font-size: 0.5em !important;
+            margin-top: 5px !important;
+        }
     </style>
 </head>
 <body>
@@ -26,7 +35,8 @@
         <div class="slides">
             <section data-markdown="content.md" 
                      data-separator="^\n---\n" 
-                     data-separator-vertical="^\n\n">
+                     data-separator-vertical="^\n\n"
+                     data-notes="^Note:">
             </section>
         </div>
     </div>
@@ -37,19 +47,23 @@
         Reveal.initialize({
             plugins: [ RevealMarkdown ],
             hash: true,
-            center: true,
-            // --- 加入以下設定來控制縮放 ---
-            width: 1050,         // 簡報基礎寬度
-            height: 700,         // 簡報基礎高度
-            margin: 0.1,         // 內容與邊緣的間距
-            minScale: 0.2,       // 最小縮放比例（讓內容在小螢幕能自動縮小）
-            maxScale: 2.0,       // 最大縮放比例
-        
+            center: true, // 內容垂直居中
+            
+            // --- 核心比例設定 ---
+            width: 960,         // 固定畫布寬度
+            height: 700,        // 固定畫布高度
+            margin: 0.05,       // 內容與螢幕邊緣的間距
+            minScale: 0.2,      // 螢幕太小時，內容自動縮小的極限
+            maxScale: 1.5,      // 螢幕太大時，內容自動放大的極限
+            
+            // --- 功能設定 ---
+            transition: 'slide', // 切換動畫改為較穩定的 slide
+            mouseWheel: true,
+            
             markdown: {
                 smartypants: true,
-                sanitize: false 
-                },
-            transition: 'convex'
+                sanitize: false // 允許內嵌 HTML
+            }
         });
     </script>
 </body>
