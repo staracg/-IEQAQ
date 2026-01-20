@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
     <style>
-        .reveal img { max-height: 420px !important; border: 2px solid #666; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
-        .reveal table { font-size: 0.7em; }
+        .reveal img { 
+        max-height: 400px !important; /* 調小圖片高度，預留空間給標題和文字 */
+        width: auto;
+        border: 2px solid #666; 
+        border-radius: 8px; 
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5); 
+        margin: 10px auto !important;
+        }
+        /* 讓表格字體也縮小一點，避免跑版 */
+        .reveal table { font-size: 0.6em !important; }
+        /* 讓段落文字縮小 */
+        .reveal p { font-size: 0.8em; }
     </style>
 </head>
 <body>
