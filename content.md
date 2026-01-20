@@ -79,26 +79,23 @@
 ![QA 2](images/9.png)
 
 ---
----
 
 ## 🎵 快樂聽音樂
 
-<div style="display: flex; align-items: stretch; justify-content: center; gap: 20px;">
-    <div style="flex: 1.5; display: flex; align-items: center;">
-        <img src="images/11.png" style="width: 100%; border: 2px solid #555; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
-    </div>
-    
-    <div style="flex: 1; display: flex; flex-direction: column; gap: 15px;">
-        <div style="text-align: center;">
-            <img src="images/12.png" style="width: 100%; border: 2px solid #ff4d4d; border-radius: 8px;">
-            <p style="font-size: 0.5em; color: #ff4d4d; margin-top: 5px; font-weight: bold;">每個月花$479當盤子</p>
-        </div>
-        
-        <div style="text-align: center;">
-            <img src="images/13.png" style="width: 100%; border: 2px solid #4CAF50; border-radius: 8px;">
-            <p style="font-size: 0.5em; color: #4CAF50; margin-top: 5px; font-weight: bold;">每個月花$175當榮譽印度人</p>
-        </div>
-    </div>
+<div style="display: flex; gap: 20px; align-items: center; justify-content: center;">
+<div style="flex: 1.5;">
+<img src="images/11.png" style="width: 100%; border: 2px solid #555; border-radius: 10px;">
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 15px;">
+<div style="text-align: center;">
+<img src="images/12.png" style="width: 100%; border: 2px solid #ff4d4d; border-radius: 8px;">
+<p style="font-size: 0.5em; color: #ff4d4d; margin-top: 5px; font-weight: bold;">每個月花$479當盤子</p>
+</div>
+<div style="text-align: center;">
+<img src="images/13.png" style="width: 100%; border: 2px solid #4CAF50; border-radius: 8px;">
+<p style="font-size: 0.5em; color: #4CAF50; margin-top: 5px; font-weight: bold;">每個月花$175當榮譽印度人</p>
+</div>
+</div>
 </div>
 
 ---
