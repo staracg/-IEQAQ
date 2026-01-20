@@ -9,37 +9,75 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css">
 
     <style>
-        .reveal .slides { text-align: center; }
-        
-        /* 圖片自適應：高度鎖定 400px 以內 */
-        .reveal img { 
-            max-height: 400px !important; 
-            width: auto !important; 
-            margin: 10px auto !important;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        /* 1. 全域投影片佈局 */
+        .reveal .slides { 
+            text-align: center; 
         }
-
-        /* 標題與文字大小 */
-        .reveal h2 { font-size: 1.5em !important; margin-bottom: 15px !important; }
-        .reveal p, .reveal li { font-size: 0.8em !important; }
-
-        /* 快樂聽音樂：Flex 佈局 */
+    
+        /* 2. 核心修復：強制長圖片獨立佔行，不與文字並排 */
+        .reveal img { 
+            max-height: 420px !important; /* 鎖定高度，留空間給標題與文字 */
+            width: auto !important; 
+            max-width: 90% !important;
+            
+            /* 強制變成區塊元件，確保文字一定在上方或下方 */
+            display: block !important; 
+            margin: 15px auto !important; 
+            
+            border: 2px solid #555;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            object-fit: contain;
+        }
+    
+        /* 3. 標題與文字縮放 */
+        .reveal h2 { 
+            font-size: 1.6em !important; 
+            margin-bottom: 0.5em !important;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+    
+        .reveal p, .reveal li { 
+            font-size: 0.85em !important; 
+            line-height: 1.4 !important;
+        }
+    
+        /* 4. 快樂聽音樂：特殊左 1 右 2 佈局修正 */
+        /* 這裡需要覆蓋掉上面的 display: block 才能並排 */
         .music-container {
-            display: flex;
-            gap: 20px;
-            align-items: center;
+            display: flex !important;
             justify-content: center;
+            align-items: center;
+            gap: 25px;
             width: 100%;
         }
-        .music-item p {
-            font-size: 0.5em !important;
-            margin: 5px 0 !important;
-            font-weight: bold;
-        }
-        .music-item img {
-            max-height: 230px !important;
+    
+        .music-container img {
+            display: inline-block !important; /* 音樂章節允許並排 */
             margin: 0 !important;
+        }
+    
+        .music-item p {
+            font-size: 0.55em !important;
+            margin: 8px 0 0 0 !important;
+            font-weight: bold;
+            color: inherit;
+        }
+    
+        /* 限制音樂章節右側小圖高度，避免文字被推走 */
+        .music-item img {
+            max-height: 250px !important;
+        }
+    
+        /* 5. 價格表格優化 */
+        .reveal table {
+            margin: 0 auto;
+            font-size: 0.7em !important;
+            border-collapse: collapse;
+        }
+        .reveal table th, .reveal table td {
+            border: 1px solid #666;
+            padding: 10px 20px;
         }
     </style>
 </head>
